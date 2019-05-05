@@ -9,6 +9,8 @@
 	<div class="container">
 		<h1>Администрирование</h1>
 		<div>
+			<a href="../index.php">На главную</a>
+			<br>
 			<a href="index.php?action=add">Добавить новость</a>
 			<table class="admin-table">
 				<tr>
