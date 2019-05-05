@@ -11,8 +11,8 @@
 		<div>
 			<?php foreach($articles as $a): ?>
 			<div class="article">
-				<h3><a href="article.php?id=<?=$a['id']?>"><?=$a['title']?></a></h3>
-				<p><?=$article['content']?></p>
+				<h3><a href="article.php?id=<?=$a['NewsId']?>"><?=$a['Title']?></a></h3>
+				<p><?=articles_intro($a['Content'])?></p>
 			</div>
 			<?php endforeach ?>
 		</div>

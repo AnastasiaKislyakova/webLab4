@@ -9,8 +9,8 @@
 	<div class="container">
 		<div>
 			<div class="article">
-				<h3><?=$article['title']?></h3>
-				<p><?=$article['content']?></p>
+				<h3><?=$article['Title']?></h3>
+				<p><?=$article['Content']?></p>
 			</div>
 		</div>
 </body>

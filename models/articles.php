@@ -30,12 +30,40 @@ function articles_get($link, $id){
 	return $article;
 }
 
-function articles_new($title, $content){
+function articles_new($link, $title, $content){
+	$title = trim($title);
+	$content = trim($content);
 
+	if ($title == '')
+		return false;
+
+	$t = "insert into News (Title, Content) values ('%s', '%s')";
+
+	$query = sprintf($t, mysqli_real_escape_string($link, $title), mysqli_real_escape_string($link, $content));
+
+	$result = mysqli_query($link, $query);
+
+	if (!$result)
+		die(mysqli_error($link));
+
+	return true;
 }
 
-function articles_delete($id){
+function articles_delete($link, $id){
+	$id = (int)$id;
+	if ($id == 0)
+		return false;
 
+	$query = sprintf("delete from News where NewsId='%d'", $id);
+	$result = mysqli_query($link, $query);
+
+	if (!$result)
+		die(mysqli_error($link));
+
+	return mysqli_affected_rows($link);
 }
 
+function articles_intro($text, $len = 500){
+	return mb_substr($text, 0, $len);
+}
 ?>
