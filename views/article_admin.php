@@ -2,13 +2,15 @@
 <html>
 <header>
 	<meta charset='utf-8' />
-	<link rel="stylesheet" href="../style.css"
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="../style.css">
 </header>
-<body>
+<body class="color-bg">
 	<div class="container">
-		 <h3> Добавление новостей </h3>
-		 <form method="post" action="index.php?action=add" >
+		<h1 class="display-4">Новостной портал</h1>
+		<br>
+		<h3 class="display-5"> Добавление новостей </h3>
+		<form method="post" action="index.php?action=add" >
 		 	<br>
 		 		Заголовок новости <br>
 		 		<input type="text" Size=90 name="Title" required>
